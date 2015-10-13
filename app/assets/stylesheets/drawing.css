@@ -5,7 +5,7 @@
 	color: white;
 	font-family: sans-serif;
 	text-align: center;
-	background-color: orchid;
+	background-color: rgb(100, 100, 100);
 }
 
 #check{
@@ -16,7 +16,7 @@
 }
 
 #check:hover{
-	background-color: linen;
+	background-color: black;
 }
 #sound{
 	position: absolute;
@@ -27,11 +27,9 @@
 #c-wrapper{
 	width: 440px;
 	margin: 0px auto;
-	
 }
 
 #c{
-	background-color: linen;
+	background-color: rgb(200, 200, 200);
 	border: 1px solid black;
-	//setting height in css breaks behavior
 }
