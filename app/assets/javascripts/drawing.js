@@ -16,7 +16,7 @@ $(document).ready(function(){
 	//
 
 	
-	text("Baby");
+	text("B");
 	var initialBG = calculateColor(0,0,0,0);
 	var initialLetter = calculateColor(255,0,0,1);
 	alert(initialBG);
