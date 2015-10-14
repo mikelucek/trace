@@ -19,22 +19,15 @@ $(document).ready(function(){
 	text("B");
 	var initialBG = calculateColor(0,0,0,0);
 	var initialLetter = calculateColor(255,0,0,1);
-	alert(initialBG);
-	alert(initialLetter);
+
 	draw();
 	
 	$("#check").click(function(){
 		var currentBG = calculateColor(0,0,0,0);
-		alert("currentBG " + currentBG);
 		var currentLetter = calculateColor(255,0,0,1);
 
-		alert("currentLetter" + currentLetter);
 		var score = ((1-(currentLetter/initialLetter)) - (1-(currentBG/initialBG)));
-
-		//var score = 1 - ((currentLetter/initialLetter) / (currentBG/initialBG));
-		alert("your score is " + score);
-		if(currentTransparency<initialTransparency){alert("You failed. Refresh the page to try again.");}
-		else{alert("good job!");}
+		console.log(score);
 		
 	});
 
