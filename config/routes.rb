@@ -15,6 +15,8 @@
     passwords: 'admins/passwords'
   }
 
+  get '/admin_path', to: 'users#profile', as: :admin_root
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

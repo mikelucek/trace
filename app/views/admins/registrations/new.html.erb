@@ -1,4 +1,6 @@
-<h2>Sign up</h2>
+<h2>Admin Sign up</h2>
+
+<%= link_to "Sign Out", destroy_admin_session_path, method: "delete" %>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -26,4 +28,4 @@
   </div>
 <% end %>
 
-<%= render "admin/shared/links" %>
+<%= render "admins/shared/links" %>
