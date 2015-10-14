@@ -6,7 +6,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` on Rails 4+ applications as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '47c9141687dc543b51b5f082b6a2ca3a66f6ccd2a0c9faa33ee5b7ee7ab95db106fb495d0fb61d7f62be3c2d7064a70fb97ab0edffb59bf594ede3a965e115b7'
+  # config.secret_key = 'bcab5d49720fa263ade0f29b1ae6aa2778fc152148b2ce961dd7e3dbf2e01c3ce9d39aca0c3d510cfda0ef7f52a92e2eab11cc20e6f63dd2f90b303922aab1ed'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -96,10 +96,10 @@ Devise.setup do |config|
   # a value less than 10 in other environments. Note that, for bcrypt (the default
   # encryptor), the cost increases exponentially with the number of stretches (e.g.
   # a value of 20 is already extremely slow: approx. 60 seconds for 1 calculation).
-  config.stretches = Rails.env.test? ? 1 : 10
+config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = '4b229605d6e8b8fbf13fb38da3e7a00decfda111591fe808180a4ac3addeeebb6de90ddb10a22a0ea839ca1f8736b16139eb34518ab514834dc25e3ed4f4b739'
+  # config.pepper = 'e8fc69d32a39b4f136f7775a8533bc7143ebf1057408d63fd8227ade7da8cde500aacac0ee2a3b91a00e8de47f9695390eb1bfce00fb5cb1483720d518a87a05'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -259,4 +259,7 @@ Devise.setup do |config|
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
+
+  config.scoped_views = true
+
 end
