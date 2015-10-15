@@ -27,6 +27,7 @@ $(document).ready(function(){
 		var currentLetter = calculateColor(255,0,0,1);
 
 		var score = ((1-(currentLetter/initialLetter)) - (1-(currentBG/initialBG)));
+		var score = parseInt(score*1000);
 		console.log(score);
 		window.location = '/submit_score?score=' + score + '&letter=' + letter;
 		
