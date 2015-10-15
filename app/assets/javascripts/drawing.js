@@ -16,7 +16,7 @@ $(document).ready(function(){
 	//
 
 	
-	text("B");
+	text(letter);
 	var initialBG = calculateColor(0,0,0,0);
 	var initialLetter = calculateColor(255,0,0,1);
 
@@ -28,6 +28,7 @@ $(document).ready(function(){
 
 		var score = ((1-(currentLetter/initialLetter)) - (1-(currentBG/initialBG)));
 		console.log(score);
+		window.location = '/submit_score?score=' + score + '&letter=' + letter;
 		
 	});
 
