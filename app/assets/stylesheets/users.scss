@@ -21,14 +21,15 @@ body {
 }
 
 .anim {
-	background-color: $lt_green;
+	background-color: $green;
 	text-align: center;
 }
 
 .kid_login {
-	background-color: $lt_blue;
+	background-color: $yellow;
 	text-align: center;
 }
+
 
 /* =====================
 ------ ADMIN MENU ---------
@@ -36,8 +37,40 @@ body {
 
 .admin_navbar {
 	background-color: $red;
+	.admin_menu {
+		margin-top: 10px;
+		text-align: center;
+		li {
+			list-style-type: none;
+			display: inline;
+			padding: 4px;
+		}
+		a  {
+		color: $yellow;
+		}
+	}
 }
 
-.admin_menu a  {
-	color: $yellow;
+
+/* =========================
+------ ADMIN PROFILE -------
+========================== */
+
+#admin_header {
+	background-color: $green;
+	margin-bottom: 0;
+	h2 {
+		color: $red;
+		text-align: center;
+	}
 }
+
+.add_student {
+	text-align: center;
+	font-size: 1.4em;
+	background-color: $orange;
+	a {
+		color: $purple;
+	}
+}
+

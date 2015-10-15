@@ -1,9 +1,17 @@
 <%= render 'layouts/admin_menu' %>
 
-<h1>Welcome to your Admin home page</h1>
+<div class="jumbotron" id="admin_header">
+	<h2>Welcome, 
+		<%= current_admin.first %> <%= current_admin.last %>
+	</h2>
+	<h2>Welcome to your Admin home page</h2>
+</div>
 
-
-<%= link_to "Add a student", new_kid_registration_path %>
-<br>
+<div class = "row">
+	<div class = "col-md-12 add_student">
+		<%= link_to "Add a student", new_kid_registration_path %>
+		<br>
+	</div>
+</div>
 
 <%= link_to "Edit this student's settings", edit_kid_registration_path %>

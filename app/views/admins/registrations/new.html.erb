@@ -1,13 +1,21 @@
 <h2>Admin Sign up</h2>
 
-<%= link_to "Sign Out", destroy_admin_session_path, method: "delete" %>
-
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.label :first %><br />
+    <%= f.text_field :first, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last %><br />
+    <%= f.text_field :last %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email %>
   </div>
 
   <div class="field">
