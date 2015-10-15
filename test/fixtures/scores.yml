@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  kid_id: MyString
+  score: 1
+  letter: MyString
+
+two:
+  kid_id: MyString
+  score: 1
+  letter: MyString
