@@ -2,7 +2,9 @@
   <% controller.redirect_to new_admin_session_path %>
 <% end %>
 
-<h2>Kid Sign up</h2>
+<%= render 'layouts/admin_menu2' %>
+
+<h2>Sign up your student</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>

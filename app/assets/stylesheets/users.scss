@@ -29,3 +29,15 @@ body {
 	background-color: $lt_blue;
 	text-align: center;
 }
+
+/* =====================
+------ ADMIN MENU ---------
+====================== */
+
+.admin_navbar {
+	background-color: $red;
+}
+
+.admin_menu a  {
+	color: $yellow;
+}

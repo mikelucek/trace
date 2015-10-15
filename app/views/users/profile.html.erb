@@ -1,9 +1,9 @@
-<%= link_to "Sign Out", destroy_admin_session_path, method: "delete" %>
+<%= render 'layouts/admin_menu' %>
 
 <h1>Welcome to your Admin home page</h1>
 
-<%= link_to "Add a student", new_kid_registration_path %>
 
+<%= link_to "Add a student", new_kid_registration_path %>
 <br>
 
 <%= link_to "Edit this student's settings", edit_kid_registration_path %>
