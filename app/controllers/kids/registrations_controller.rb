@@ -8,9 +8,15 @@ class Kids::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    super
+      @kid = current_admin.kids.build(kid_params)
+      if @kid.save
+        flash[:success] = "Your student has been added!"
+        redirect_to admin_root_path
+      end
+    
+  end
 
   # GET /resource/edit
   # def edit
