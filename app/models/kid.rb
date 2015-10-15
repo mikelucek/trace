@@ -5,4 +5,5 @@ class Kid < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   belongs_to :admin
+  has_many :scores
 end
