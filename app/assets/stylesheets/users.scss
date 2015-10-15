@@ -1,3 +1,31 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'color';
+
+body {
+}
+
+/* =====================
+------ SIGN IN ---------
+====================== */
+
+.container-fluid {
+	background-color: white;
+	color: rgb(140, 60, 20);
+}
+
+.admin_login {
+	background-color: $lt_gray;
+}
+
+.anim {
+	background-color: $lt_green;
+	text-align: center;
+}
+
+.kid_login {
+	background-color: $lt_blue;
+	text-align: center;
+}
