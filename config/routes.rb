@@ -18,7 +18,8 @@
   }
 
   get '/admin_path', to: 'users#profile', as: :admin_root
-  get '/submit_score', to: 'scores#submit', as: :submit_score
+  post '/submit_score', to: 'scores#submit', as: :submit_score
+  get '/index_score', to: 'scores#index', as: :score_index
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -29,7 +29,24 @@ $(document).ready(function(){
 		var score = ((1-(currentLetter/initialLetter)) - (1-(currentBG/initialBG)));
 		var score = parseInt(score*1000);
 		console.log(score);
-		window.location = '/submit_score?score=' + score + '&letter=' + letter;
+		//window.location = '/submit_score?score=' + score + '&letter=' + letter;
+		//change this to post
+
+		var form = document.createElement("form");
+		form.method = 'post';
+		form.action = '/submit_score';
+		var input = document.createElement('input');
+		input.type = "text";
+		input.name = "score";
+		input.value = score;
+		form.appendChild(input);
+		var input2 = document.createElement('input');
+		input2.type = "text";
+		input2.name = "letter";
+		input2.value = letter;
+		form.appendChild(input2);
+		form.submit();
+
 		
 	});
 
