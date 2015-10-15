@@ -9,7 +9,6 @@ class Kids::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
-    super
       @kid = current_admin.kids.build(kid_params)
       if @kid.save
         flash[:success] = "Your student has been added!"
