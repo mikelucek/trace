@@ -1,26 +1,52 @@
-<h2>Log in</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <h2>Log in</h2>
     </div>
-  <% end -%>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+    <div class="col-md-4 admin_login">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
+
+        <% if devise_mapping.rememberable? -%>
+          <div class="field">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+        <% end -%>
+
+        <div class="actions">
+          <%= f.submit "Log in" %>
+        </div>
+      <% end %>
+
+      <%= render "admins/shared/links" %>
+    </div>
   </div>
-<% end %>
+  <div class="row anim">
+    <div class="col-md-12">
+      <h1> Animated Logo</h1>
+    </div>
+  </div>
 
-<%= render "admins/shared/links" %>
+  <br>
+  <hr>
+  <br>
+
+  <div class="row kid_login">
+    <div class="col-md-12">
+      <h1>Kid Login</h1>
+    </div>
+  </div>
+
+</div>
