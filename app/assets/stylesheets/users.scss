@@ -72,13 +72,22 @@ body {
 	.admin_menu {
 		margin-top: 10px;
 		text-align: center;
+		padding-left: 0;
 		li {
 			list-style-type: none;
 			display: inline;
-			padding: 4px;
+			padding: 6px;
+			border-left: 1px solid white;
+			font-size: .9em;
+			text-align: center;
 		}
 		a  {
-		color: $yellow;
+			color: white;
+			text-align: center;
+		}
+		a:hover {
+			color: $yellow;
+			text-decoration: none;
 		}
 	}
 }
@@ -89,7 +98,7 @@ body {
 ========================== */
 
 #admin_header {
-	background-color: $green;
+	background-color: white;
 	margin-bottom: 0;
 	h2 {
 		color: $red;
@@ -100,9 +109,9 @@ body {
 .add_student {
 	text-align: center;
 	font-size: 1.4em;
-	background-color: $orange;
+	background-color: $red;
 	a {
-		color: $purple;
+		color: $yellow;
 	}
 }
 
