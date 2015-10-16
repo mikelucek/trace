@@ -18,6 +18,7 @@
   }
 
   get '/admin_path', to: 'users#profile', as: :admin_root
+  get '/index_score', to: 'scores#index', as: :kid_root
   post '/submit_score', to: 'scores#submit', as: :submit_score
   get '/index_score', to: 'scores#index', as: :score_index
 
