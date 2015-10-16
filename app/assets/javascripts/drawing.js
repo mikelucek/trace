@@ -2,16 +2,16 @@ $(document).ready(function(){
 
 	function Sound(fx){
 		var audioElement = document.createElement('audio');
-        audioElement.setAttribute('src', fx);
-        audioElement.setAttribute('autoplay', 'autoplay');
-        audioElement.addEventListener("load", function() {
-            audioElement.play();
-        }, true);
-    }
+		audioElement.setAttribute('src', fx);
+		audioElement.setAttribute('autoplay', 'autoplay');
+		audioElement.addEventListener("load", function() {
+			audioElement.play();
+		}, true);
+	}
 
-    var sound = '/' + letter + '.wav';
+	var sound = '/' + letter + '.wav';
 
-    Sound(sound);
+	Sound(sound);
 
 
 
@@ -52,51 +52,58 @@ $(document).ready(function(){
 			var scoreSound = '/good.wav';
 			Sound(scoreSound);
 		} else {var scoreSound = '/bad.wav';
-				Sound(scoreSound);}
-				
+		Sound(scoreSound);}
+
+
+
+
+
 		//window.location = '/submit_score?score=' + score + '&letter=' + letter;
 		//change this to post
+		//we're waiting to submit the form so that we can hear the result sound.
+		setTimeout(function(){
 
-		var form = document.createElement("form");
-		form.method = 'post';
-		form.action = '/submit_score';
-		var input = document.createElement('input');
-		input.type = "text";
-		input.name = "score";
-		input.value = score;
-		form.appendChild(input);
-		var input2 = document.createElement('input');
-		input2.type = "text";
-		input2.name = "letter";
-		input2.value = letter;
-		form.appendChild(input2);
-		var input3 = document.createElement('input');
-		input3.type = "text";
-		input3.name = "kid_id";
-		input3.value = kid;
-		form.appendChild(input3)
-		form.submit();
+			var form = document.createElement("form");
+			form.method = 'post';
+			form.action = '/submit_score';
+			var input = document.createElement('input');
+			input.type = "text";
+			input.name = "score";
+			input.value = score;
+			form.appendChild(input);
+			var input2 = document.createElement('input');
+			input2.type = "text";
+			input2.name = "letter";
+			input2.value = letter;
+			form.appendChild(input2);
+			var input3 = document.createElement('input');
+			input3.type = "text";
+			input3.name = "kid_id";
+			input3.value = kid;
+			form.appendChild(input3)
+			form.submit();
+		}, 2000);
 
 		
 	});
 
-		function draw(){
+function draw(){
 			//this.offsetLeft and this.offsetTop are needed to correct for the 
 			//position of the canvas on the page
 			el.onmousedown = function(e) {
-			  isDrawing = true;
-			  ctx.moveTo(e.clientX-this.offsetLeft, e.clientY-this.offsetTop);
+				isDrawing = true;
+				ctx.moveTo(e.clientX-this.offsetLeft, e.clientY-this.offsetTop);
 			};
 			el.onmousemove = function(e) {
-			  if (isDrawing) {
-			  	ctx.lineWidth = 40;
-			  	ctx.lineJoin = ctx.lineCap = "round";
-			    ctx.lineTo(e.clientX-this.offsetLeft, e.clientY-this.offsetTop);
-			    ctx.stroke();
-			  }
+				if (isDrawing) {
+					ctx.lineWidth = 40;
+					ctx.lineJoin = ctx.lineCap = "round";
+					ctx.lineTo(e.clientX-this.offsetLeft, e.clientY-this.offsetTop);
+					ctx.stroke();
+				}
 			};
 			el.onmouseup = function() {
-			  isDrawing = false;
+				isDrawing = false;
 			}
 		}
 
@@ -109,7 +116,7 @@ $(document).ready(function(){
 		};
 
 		function calculateColor(r, g, b, a){
-		
+
 
 			//get image data into an array
 			var pixels = ctx.getImageData(0,0,el.width,el.height);
@@ -133,5 +140,5 @@ $(document).ready(function(){
 			return PixelCount;
 
 		}
-	
-});
+
+	});
