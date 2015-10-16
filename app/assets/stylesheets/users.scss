@@ -5,6 +5,7 @@
 @import 'color';
 
 body {
+	font-family: 'Antic', sans-serif;
 }
 
 /* =====================
@@ -12,16 +13,19 @@ body {
 ====================== */
 
 .container-fluid {
+	font-family: 'Antic', sans-serif;
 	background-color: white;
 	color: rgb(140, 60, 20);
 }
 
 .admin_login {
-	background-color: $purple;
+	background-color: $admin_gray;
 	padding: 10px;
 	text-align: center;
 	label {
-		color: $yellow;
+		color: $admin_darkred;
+		margin-bottom: 0;
+		margin-top: 4px;
 	}
 }
 
@@ -37,9 +41,9 @@ body {
 
 #gear {
 	float:right;
-	background-color: $red;
-	color: $yellow;
-	border: 1px solid $yellow;
+	background-color: $admin_darkred;
+	color: $admin_gray;
+	border: 1px solid $admin_gray;
 	padding: 3px;
 	font-size: .8em;
 }
@@ -48,18 +52,33 @@ body {
 }
 
 .modal-header {
-	background-color: $yellow;
+	background-color: $admin_darkred;
+	.close {
+		color: white;
+		font-size: 2em;
+	}
 }
 
 .modal-title {
-	color: $purple;
+	color: $admin_gray;
 }
 
 .modal-body {
+	background-color: white;
+}
+
+.admin_signin_submit {
+	color: white;
+	input {
+		margin-top: 4px;
+		background-color: $admin_darkred;
+		border: $admin_pink;
+	}
 }
 
 #admin_links a {
-	color: $orange;
+	color: $admin_red;
+	font-size: .8em;
 }
 
 
@@ -68,7 +87,7 @@ body {
 ====================== */
 
 .admin_navbar {
-	background-color: $red;
+	background-color: $admin_gray;
 	.admin_menu {
 		margin-top: 10px;
 		text-align: center;
@@ -77,16 +96,16 @@ body {
 			list-style-type: none;
 			display: inline;
 			padding: 6px;
-			border-left: 1px solid white;
+			border-left: 1px solid $admin_darkred;
 			font-size: .9em;
 			text-align: center;
 		}
 		a  {
-			color: white;
+			color: $admin_red;
 			text-align: center;
 		}
 		a:hover {
-			color: $yellow;
+			color: $admin_darkred;
 			text-decoration: none;
 		}
 	}
@@ -107,11 +126,22 @@ body {
 }
 
 .add_student {
+	font-family: 'Gloria Hallelujah', cursive;
 	text-align: center;
 	font-size: 1.4em;
-	background-color: $red;
+	background-color: $admin_darkred;
 	a {
-		color: $yellow;
+		background-color: $admin_red;
+		margin: 2px;
+		padding-right: 15px;
+		padding-left: 15px;
+		color: $admin_pink;
+		border-right: 1px solid white;
+		border-left: 1px solid white;
 	}
+	a:hover {
+			color: $admin_darkred;
+			text-decoration: none;
+		}
 }
 
