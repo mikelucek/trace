@@ -21,6 +21,7 @@
   get '/index_score', to: 'scores#index', as: :kid_root
   post '/submit_score', to: 'scores#submit', as: :submit_score
   get '/index_score', to: 'scores#index', as: :score_index
+  get '/kid_profile', to: 'kids#show', as: :kid_profile
 
   root 'users#index'
 

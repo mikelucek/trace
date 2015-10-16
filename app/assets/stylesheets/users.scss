@@ -15,7 +15,7 @@ body {
 .container-fluid {
 	font-family: 'Antic', sans-serif;
 	background-color: white;
-	color: rgb(140, 60, 20);
+	color: $admin_darkred;
 }
 
 .admin_login {
@@ -31,11 +31,6 @@ body {
 
 .anim {
 	background-color: $green;
-	text-align: center;
-}
-
-.kid_login {
-	background-color: $yellow;
 	text-align: center;
 }
 
@@ -79,6 +74,18 @@ body {
 #admin_links a {
 	color: $admin_red;
 	font-size: .8em;
+}
+
+.kid_login {
+	font-family: 'Gloria Hallelujah', cursive;
+	background-color: $yellow;
+	color: $red;
+	text-align: center;
+	padding: 10px;
+	label {
+		margin-bottom: 0;
+		margin-top: 4px;
+	}
 }
 
 
@@ -145,3 +152,10 @@ body {
 		}
 }
 
+/* =========================
+------ KID PROFILE -------
+========================== */
+
+.divider {
+	border: 10px solid $admin_red;
+}
