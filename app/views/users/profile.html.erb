@@ -14,4 +14,19 @@
 	</div>
 </div>
 
-<%= link_to "Edit this student's settings", edit_kid_registration_path %>
+<div id="admin_kids">
+
+	<% if current_admin.kids.any? %>
+      <h3>Students (<%= current_admin.kids.count %>)</h3><hr>
+      <% @kids = current_admin.kids.all %>
+      <% @kids.each do |kid| %>
+		    <li>
+		      <%= kid.first %>
+		      <%= kid.last %>
+		    </li>
+		    <%= link_to "View this student's page", edit_kid_registration_path %>
+		    <hr>
+  		<% end %>
+  <% end %>
+	
+</div>
