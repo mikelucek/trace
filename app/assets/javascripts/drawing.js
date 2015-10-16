@@ -1,4 +1,12 @@
 $(document).ready(function(){
+
+	var audioElement = document.createElement('audio');
+        audioElement.setAttribute('src', '/' + letter + '.wav');
+        audioElement.setAttribute('autoplay', 'autoplay');
+        audioElement.addEventListener("load", function() {
+            audioElement.play();
+        }, true);
+
 	var el = document.getElementById('c');
 	var ctx = el.getContext('2d');
 	var isDrawing;
@@ -45,6 +53,11 @@ $(document).ready(function(){
 		input2.name = "letter";
 		input2.value = letter;
 		form.appendChild(input2);
+		var input3 = document.createElement('input');
+		input3.type = "text";
+		input3.name = "kid_id";
+		input3.value = kid;
+		form.appendChild(input3)
 		form.submit();
 
 		

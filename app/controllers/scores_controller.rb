@@ -4,13 +4,14 @@ class ScoresController < ApplicationController
 	def index
 		#let's get smarter about this...
 		@letter = ('A'..'Z').to_a.sample
+    @kid = current_kid.id
 	end
 
   def submit
-  	if !params[:score].nil? && !params[:letter].nil?
+  	if !params[:score].nil? && !params[:letter].nil? && !params[:kid_id].nil?
   		#need to get the current_kid at some point.
   		#save a score.
-  		@score = Score.new( score: params[:score], letter: params[:letter])
+  		@score = Score.new(kid_id: params[:kid_id], score: params[:score], letter: params[:letter])
   		@score.save
   	end
 
