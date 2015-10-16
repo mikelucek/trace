@@ -4,7 +4,10 @@ class ScoresController < ApplicationController
 	def index
 		#let's get smarter about this...
 		@letter = ('A'..'Z').to_a.sample
-    @kid = current_kid.id
+    if current_kid
+      @kid = current_kid.id
+      @kidname = current_kid.first
+    end
 	end
 
   def submit
