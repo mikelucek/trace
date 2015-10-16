@@ -9,4 +9,14 @@ class Kid < ActiveRecord::Base
 
   belongs_to :admin
   has_many :scores
+
+
+  def password_required?
+  	false
+  	
+  end
+
+  def email_required?
+  	false
+  end
 end

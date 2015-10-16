@@ -13,19 +13,19 @@
 	</div>
 </div>
 
-<div id="admin_kids">
-
-	<% if current_admin.kids.any? %>
-      <h3>Students (<%= current_admin.kids.count %>)</h3><hr>
-      <% @kids = current_admin.kids.all %>
-      <% @kids.each do |kid| %>
-		    <li>
-		      <%= kid.first %>
-		      <%= kid.last %>
-		    </li>
-		    <%= link_to "View this student's page", edit_kid_registration_path %>
-		    <hr>
-  		<% end %>
-  <% end %>
-	
+<div class="row">
+	<div class="col-md-6 col-md-offset-3 admin_kids">
+		<% if current_admin.kids.any? %>
+	      <h3>Students (<%= current_admin.kids.count %>)</h3><hr>
+	      <% @kids = current_admin.kids.all %>
+	      <% @kids.each do |kid| %>
+			    <li>
+			      <%= kid.first %>
+			      <%= kid.last %>
+			    </li>
+			    <%= link_to "View this student's page", kid_profile_path(kid_id: kid.id) %>
+			    <hr>
+	  		<% end %>
+	  <% end %>
+	</div>
 </div>

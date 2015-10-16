@@ -8,7 +8,7 @@
 <body>
 	<%= link_to "Sign Out", destroy_admin_session_path, method: "delete" %>
 	<div id="wrapper">
-		<h1>Trace the letter!</h1>
+		<h1>Trace the letter, <%= current_kid.first %> !</h1>
 		<div id="canvas-wrapper">
 			<canvas id="c" width="900px" height="400px"></canvas>
 		</div>
