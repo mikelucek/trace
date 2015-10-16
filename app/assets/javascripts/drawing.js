@@ -1,11 +1,21 @@
 $(document).ready(function(){
 
-	var audioElement = document.createElement('audio');
-        audioElement.setAttribute('src', '/' + letter + '.wav');
+	function Sound(fx){
+		var audioElement = document.createElement('audio');
+        audioElement.setAttribute('src', fx);
         audioElement.setAttribute('autoplay', 'autoplay');
         audioElement.addEventListener("load", function() {
             audioElement.play();
         }, true);
+    }
+
+    var sound = '/' + letter + '.wav';
+
+    Sound(sound);
+
+
+
+
 
 	var el = document.getElementById('c');
 	var ctx = el.getContext('2d');
@@ -37,6 +47,13 @@ $(document).ready(function(){
 		var score = ((1-(currentLetter/initialLetter)) - (1-(currentBG/initialBG)));
 		var score = parseInt(score*1000);
 		console.log(score);
+
+		if (score>500){
+			var scoreSound = '/good.wav';
+			Sound(scoreSound);
+		} else {var scoreSound = '/bad.wav';
+				Sound(scoreSound);}
+				
 		//window.location = '/submit_score?score=' + score + '&letter=' + letter;
 		//change this to post
 
