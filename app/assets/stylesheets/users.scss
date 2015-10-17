@@ -90,7 +90,7 @@ body {
 
 
 /* =====================
------- ADMIN MENU ---------
+-------- MENUS ---------
 ====================== */
 
 .admin_navbar {
@@ -113,6 +113,32 @@ body {
 		}
 		a:hover {
 			color: $admin_darkred;
+			text-decoration: none;
+		}
+	}
+}
+
+.kid_navbar {
+	font-family: 'Gloria Hallelujah', cursive;
+	background-color: $red;
+	.kid_menu {
+		margin-top: 10px;
+		text-align: center;
+		padding-left: 0;
+		li {
+			list-style-type: none;
+			display: inline;
+			padding: 6px;
+			border-left: 1px solid $orange;
+			font-size: 1.4em;
+			text-align: center;
+		}
+		a  {
+			color: $yellow;
+			text-align: center;
+		}
+		a:hover {
+			color: $purple;
 			text-decoration: none;
 		}
 	}
@@ -159,3 +185,23 @@ body {
 .divider {
 	border: 10px solid $admin_red;
 }
+
+.kid_divider {
+	border: 10px solid $purple;
+}
+
+.kid_divider_small {
+	border: 1px dotted $green;
+}
+
+.kid_view {
+	background-color: white;
+	color: $purple;
+}
+
+	// <% if admin_signed_in? %>
+	// 	<%= render 'layouts/admin_menu2' %>
+	// <% end %>
+	// <% if kid_signed_in? %>
+	// 	<%= render 'layouts/kid_menu' %>
+	// <% end %>
