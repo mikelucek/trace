@@ -6,7 +6,12 @@
 
 </head>
 <body>
-
+	<% if admin_signed_in? %>
+		<%= render 'layouts/admin_menu2' %>
+	<% end %>
+	<% if kid_signed_in? %>
+		<%= render 'layouts/kid_menu' %>
+	<% end %>
 
 	<div id="wrapper">
 
