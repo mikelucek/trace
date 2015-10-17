@@ -7,6 +7,13 @@ $(document).ready(function(){
 		$("#kid_email").val(alt);
 	});
 
+	$('.password-icon').click(function(){
+		var alt = $(this).attr("alt");
+		console.log(alt);
+		console.log("PASS");
+		$("#kid_password").val(alt);
+	});
+
 	function Sound(fx){
 		var audioElement = document.createElement('audio');
 		audioElement.setAttribute('src', fx);
