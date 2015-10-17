@@ -1,5 +1,12 @@
 $(document).ready(function(){
 
+	$('.login-photo').click(function(){
+		var alt = $(this).attr("alt");
+		console.log(alt);
+		console.log("CLICK!");
+		$("#kid_first").val(alt);
+	});
+
 	function Sound(fx){
 		var audioElement = document.createElement('audio');
 		audioElement.setAttribute('src', fx);
