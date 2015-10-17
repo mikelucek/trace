@@ -4,7 +4,7 @@ $(document).ready(function(){
 		var alt = $(this).attr("alt");
 		console.log(alt);
 		console.log("CLICK!");
-		$("#kid_first").val(alt);
+		$("#kid_email").val(alt);
 	});
 
 	function Sound(fx){

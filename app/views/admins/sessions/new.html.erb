@@ -54,7 +54,7 @@
 
 <% @kids = Kid.all %>
 <% @kids.each do |k| %>
-<%= image_tag(k.avatar.url(:thumb), class: "login-photo", alt: k.first) %>
+<%= image_tag(k.avatar.url(:thumb), class: "login-photo", alt: k.email) %>
 <% end %>
 
   <div class="row">
@@ -62,8 +62,8 @@
       <h2>SIGN IN!</h2>
         <%= form_for(:kid, url: kid_session_path(:kid)) do |f| %>
           <div class="field">
-            <%= f.label :first, "First Name" %><br />
-            <%= f.text_field :first, autofocus: true %>
+            <%= f.label :email, "email" %><br />
+            <%= f.text_field :email, autofocus: true %>
           </div>
 
           <div class="field">

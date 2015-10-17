@@ -10,7 +10,7 @@ class Kids::SessionsController < Devise::SessionsController
   def create
     # super
     kid_params = params[:kid]
-    kid = Kid.where(first: kid_params[:first]).first
+    kid = Kid.where(email: kid_params[:email]).first
     if kid
       puts sign_in(:kid, kid)
       puts "OK"
