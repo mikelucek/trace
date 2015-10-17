@@ -52,6 +52,11 @@
     </div>
   </div>
 
+<% @kids = Kid.all %>
+<% @kids.each do |k| %>
+<%= image_tag(k.avatar.url(:thumb), class: "login-photo", alt: k.first) %>
+<% end %>
+
   <div class="row">
     <div class="col-md-12 kid_login">
       <h2>SIGN IN!</h2>
