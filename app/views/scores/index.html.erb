@@ -6,10 +6,15 @@
 
 </head>
 <body>
-	
-	<%= link_to "Sign Out", destroy_admin_session_path, method: "delete" %>
+	<% if admin_signed_in? %>
+		<%= render 'layouts/admin_menu2' %>
+	<% end %>
+	<% if kid_signed_in? %>
+		<%= render 'layouts/kid_menu' %>
+	<% end %>
+
 	<div id="wrapper">
-		<h1>Trace the letter, <%= current_kid.first %> !</h1>
+		<h1>Trace the letter, <%= current_kid.first %>!</h1>
 		<div id="canvas-wrapper">
 			<canvas id="c" width="900px" height="400px"></canvas>
 		</div>
