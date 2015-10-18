@@ -1,6 +1,10 @@
 
-// $(document).ready(function() {
-// 	$("#gear").click(function (){
-// 		$(".admin").slideDown('slow');
-// 	})
-// })
+$(document).ready(function(e) {
+	console.log("Hi");
+	alert("Hi");
+	$(".hide_button").click(function (){
+		$(".hide").show();
+		$(e.target).hide();
+	})
+})
+
