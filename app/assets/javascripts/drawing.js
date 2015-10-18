@@ -1,12 +1,23 @@
 $(document).ready(function(){
 
+// HOME PAGE ANIMATIONS ------------------
 
-// HOME PAGE ANIMATIONS
+	var x = $('<hr>').css({
+		"border-color": "rgb(205, 32, 44)",
+		"width": "400px",
+		"border-radius": "20px",
+		"border-width": "10px",
+		"padding": "0",
+		"margin": "0 auto",
+		"text-align": "center"
+		});
+
 	$(".hide_button").click(function (e){
-		$("#gear").show();
-		$("#anim").show();
-		$(".kid_login").show();
-		$(e.target).hide();
+		$("#gear").fadeIn(500);
+		$("#anim").fadeIn(1000);
+		$(".kid_login").fadeIn(1500);
+		$(e.target).slideUp();
+		$('.inner_button').append(x);
 	})
 
 	function blink(){
@@ -17,11 +28,9 @@ $(document).ready(function(){
 	// 	$('.down').animate({width: 150px}, 1000);
  //    $('.down').animate({width: 100px}, 1000);
 	// }
-
-
 	setInterval(blink, 500);
 
-	// END HOME PAGE ANIMATIONS
+	// END HOME PAGE ANIMATIONS ----------------
 
 	$('.login-photo').click(function(){
 		var alt = $(this).attr("alt");

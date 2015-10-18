@@ -109,9 +109,10 @@ div.alert.alert-info {
 	margin: 0;
 	color: $red;
 	text-align: center;
-	margin-bottom: 0;
+	margin-bottom: 0;	
 	h1 {
 		font-size: 7em;
+		margin-bottom: 0;
 	}
 	.dedo {
 		font-size: 1.6em;
@@ -126,12 +127,16 @@ div.alert.alert-info {
 
 #kid_avatar {
 	margin-top: 10px;
+	text-align: center;
 	div:first-child {
 		border: 5px solid $red;
 		border-radius: 20px;
 		background-color: white;
+		margin: 0 auto;
 		padding: 10px;
-		text-align: center;
+		height: 120px;
+		width: 200px;
+		overflow-y: scroll;
 	}
 }
 
@@ -145,6 +150,9 @@ div.alert.alert-info {
 	display: none;
 	position: absolute;
 	z-index: 99;
+	h2 {
+		font-size: 2em;
+	}
 	label {
 		margin-bottom: 0;
 		margin-top: 4px;
