@@ -1,6 +1,7 @@
 
 <div class="container-fluid" id="home">
-  <button type="button" id="gear" class="btn btn-info btn-lg" data-toggle="modal" data-target="#admin">Admin</button>
+  <button id="gear" data-toggle="modal" data-target="#admin"><%= image_tag("gear_icon.png", width: "60") %></button>
+
 
   <div id="admin" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -48,20 +49,24 @@
 
   <div class="row anim">
     <div class="col-md-12">
-      <h1>TRACE</h1>
+      <h1><span class="dedo">D</span>E<span class="dedo">D</span>O</h1>
     </div>
   </div>
 
-<% @kids = Kid.all %>
-<% @kids.each do |k| %>
-<%= image_tag(k.avatar.url(:thumb), class: "login-photo", alt: k.email) %>
-<% end %>
+  <div id="kid_avatar" class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <% @kids = Kid.all %>
+      <% @kids.each do |k| %>
+      <%= image_tag(k.avatar.url(:thumb), class: "login-photo", alt: k.email) %>
+      <% end %>
 
-<%= image_tag("/images/password/baby27.png", class: "password-icon", height: "40", width: "40",alt: "12345678") %>
+      <%= image_tag("/images/password/baby27.png", class: "password-icon", height: "40", width: "40",alt: "12345678") %>
 
-<%= image_tag("/images/password/baby28.png", class: "password-icon", height: "40", width: "40",alt: "87654321") %>
+      <%= image_tag("/images/password/baby28.png", class: "password-icon", height: "40", width: "40",alt: "87654321") %>
 
-<%= image_tag("/images/password/baby29.png", class: "password-icon", height: "40", width: "40",alt: "abcdefgh") %>
+      <%= image_tag("/images/password/baby29.png", class: "password-icon", height: "40", width: "40",alt: "abcdefgh") %>
+    </div>
+  </div>
 
 
 
@@ -86,7 +91,7 @@
             </div>
           <% end -%>
 
-          <div class="actions">
+          <div class="actions login">
             <%= f.submit "Log in" %>
           </div>
         <% end %>
