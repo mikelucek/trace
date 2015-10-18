@@ -6,7 +6,7 @@ $(document).ready(function(){
 		$("#gear").show();
 		$("#anim").show();
 		$(".kid_login").show();
-		$(e.target).hide().;
+		$(e.target).hide();
 	})
 
 	function blink(){
