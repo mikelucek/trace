@@ -26,6 +26,7 @@ body {
 
 #gear {
 	float:right;
+	display: none;
 	position: absolute;
 	z-index: 900;
 	top: 20px;
@@ -52,6 +53,8 @@ div.alert.alert-info {
 
 }
 
+/* ADMIN LOGIN */
+
 .admin_login {
 	background-color: $admin_gray;
 	padding: 0;
@@ -64,36 +67,6 @@ div.alert.alert-info {
 	input:focus {
 		border-color: $red;
 	}
-}
-
-.anim {
-	font-family: 'Gloria Hallelujah', cursive;
-	background-color: $yellow;
-	padding: 0;
-	padding-top: 5%;
-	margin: 0;
-	color: $red;
-	text-align: center;
-	h1 {
-		font-size: 7em;
-	}
-	.dedo {
-		font-size: 1.6em;
-	}
-}
-
-#kid_avatar {
-	margin-top: 10px;
-	div:first-child {
-		border: 5px solid $red;
-		border-radius: 20px;
-		background-color: white;
-		padding: 10px;
-		text-align: center;
-	}
-}
-
-.modal-content {
 }
 
 .modal-header {
@@ -126,6 +99,42 @@ div.alert.alert-info {
 	font-size: .8em;
 }
 
+/* MIDDLE OF THE PAGE */
+
+.anim {
+	font-family: 'Gloria Hallelujah', cursive;
+	background-color: $yellow;
+	padding: 0;
+	padding-top: 5%;
+	margin: 0;
+	color: $red;
+	text-align: center;
+	margin-bottom: 0;
+	h1 {
+		font-size: 7em;
+	}
+	.dedo {
+		font-size: 1.6em;
+	}
+	#anim {
+		display: none;
+		position:absolute;
+		z-index: 20;
+	}
+}
+
+
+#kid_avatar {
+	margin-top: 10px;
+	div:first-child {
+		border: 5px solid $red;
+		border-radius: 20px;
+		background-color: white;
+		padding: 10px;
+		text-align: center;
+	}
+}
+
 .kid_login {
 	font-family: 'Gloria Hallelujah', cursive;
 	background-color: $yellow;
@@ -133,6 +142,9 @@ div.alert.alert-info {
 	text-align: center;
 	padding-top: 2%;
 	margin-bottom: 20px;
+	display: none;
+	position: absolute;
+	z-index: 99;
 	label {
 		margin-bottom: 0;
 		margin-top: 4px;
@@ -147,6 +159,18 @@ div.alert.alert-info {
 		border-color: $yellow;
 	}
 }
+
+#start_button {
+	margin-top: 15%;
+	text-align: center;
+}
+
+ .hide_button {
+ 	background-color: $yellow;
+ 	border: none;
+ 	width: 300px;
+ 	margin: 40 auto;
+ }
 
 
 /* =====================
