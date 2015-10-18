@@ -18,11 +18,7 @@
 #check:hover{
 	background-color: black;
 }
-#sound{
-	position: absolute;
-	bottom: 0px;
-	left: 0px;
-}
+
 
 #c-wrapper{
 	width: 440px;
