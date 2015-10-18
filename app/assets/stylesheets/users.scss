@@ -20,8 +20,36 @@ body {
 
 #home {
 	background-color: $yellow;
-	height: 100vh;
+	height: 115vh;
 	margin: -15px;
+}
+
+#gear {
+	float:right;
+	position: absolute;
+	z-index: 900;
+	top: 20px;
+	right: 20px;
+	background-color: $yellow;
+	border: none;
+	padding: 3px;
+	font-size: .8em;
+	:hover {
+		border-color: $red;
+	}
+}
+
+.alert {
+	position: absolute;
+}
+
+div.alert.alert-info {
+	background-color: $purple;
+	color: $green;
+	border-color: $green;
+	border-width: 4px;
+	font-size: 1.4em;
+
 }
 
 .admin_login {
@@ -32,6 +60,9 @@ body {
 		color: $admin_darkred;
 		margin-bottom: 0;
 		margin-top: 4px;
+	}
+	input:focus {
+		border-color: $red;
 	}
 }
 
@@ -44,21 +75,22 @@ body {
 	color: $red;
 	text-align: center;
 	h1 {
-		font-size: 10em;
+		font-size: 7em;
+	}
+	.dedo {
+		font-size: 1.6em;
 	}
 }
 
-#gear {
-	float:right;
-	position: absolute;
-	z-index: 900;
-	top: 20px;
-	right: 20px;
-	background-color: $admin_darkred;
-	color: $admin_gray;
-	border: 1px solid $admin_gray;
-	padding: 3px;
-	font-size: .8em;
+#kid_avatar {
+	margin-top: 10px;
+	div:first-child {
+		border: 5px solid $red;
+		border-radius: 20px;
+		background-color: white;
+		padding: 10px;
+		text-align: center;
+	}
 }
 
 .modal-content {
@@ -99,10 +131,20 @@ body {
 	background-color: $yellow;
 	color: $red;
 	text-align: center;
-	padding-top: 4%;
+	padding-top: 2%;
+	margin-bottom: 20px;
 	label {
 		margin-bottom: 0;
 		margin-top: 4px;
+	}
+}
+
+.login {
+	input {
+		margin-top: 10px;
+		background-color: $red;
+		color: $yellow;
+		border-color: $yellow;
 	}
 }
 
