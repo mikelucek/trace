@@ -200,21 +200,59 @@ body {
 ------ KID PROFILE -------
 ========================== */
 
+#kid_info {
+	background-color: $green;
+	color: $red;
+	padding: 25px;
+	border-radius: 20px;
+	margin-top: 20px;
+}
+
+.kid_gutter {
+	background-color: $purple;
+	height: 100vh;
+}
+
 .divider {
 	border: 10px solid $admin_red;
 }
 
 .kid_divider {
-	border: 10px solid $purple;
+	border: 10px solid $red;
+	border-radius: 20px;
+	margin: 0;
+	padding: 0;
 }
 
 .kid_divider_small {
-	border: 1px dotted $green;
+	border: 2px dotted $yellow;
 }
 
 .kid_view {
 	background-color: white;
-	color: $purple;
+	color: $red;
 }
+
+#kid_score_table {
+	background-color: $yellow;
+	border-radius: 20px;
+	color: $red;
+	text-align: center;
+	margin: 0 auto;
+	tr {
+		padding-bottom: 10px;
+		td {
+			border-bottom: 1px dashed $green;
+			padding-right: 10px;
+			padding-left: 10px;
+			font-size: 1.6em;
+		}
+		.table_big {
+			font-size: 3em;
+		}
+	}
+}
+
+
 
 	
