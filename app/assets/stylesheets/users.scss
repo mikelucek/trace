@@ -125,9 +125,12 @@ div.alert.alert-info {
 }
 
 
-#kid_avatar {
+#kid_avatar, #password_pics {
 	margin-top: 10px;
 	text-align: center;
+	img {
+		margin-bottom: 6px;
+	}
 	div:first-child {
 		border: 5px solid $red;
 		border-radius: 20px;
@@ -138,6 +141,10 @@ div.alert.alert-info {
 		width: 200px;
 		overflow-y: scroll;
 	}
+}
+
+#kid_login_form{
+	display: none;
 }
 
 .kid_login {
