@@ -65,7 +65,7 @@
 			</div>
 
 			<div class="row">
-				<div class="col-sm-6 col-sm-offset-3">
+				<div class="col-sm-8 col-sm-offset-2">
 
 					<% if current_kid.scores.any? %>
 				      <h3>Number of Tests (<%= current_kid.scores.count %>)</h3><hr class="kid_divider_small">
@@ -73,8 +73,8 @@
 					      <div class="col-sm-8 col-sm-offset-2">
 						      <table id="kid_score_table">
 						      	<tr>
-						      		<td class="table_big">Letter</td>
-						      		<td class="table_big">Score</td>
+						      		<td class="table_big" width="200px">Letter</td>
+						      		<td class="table_big" width="200px">Score</td>
 						      	</tr>
 							      <% @scores = current_kid.scores.all %>
 							      <% @scores.each do |score| %>

@@ -4,7 +4,7 @@
 		<%= render 'layouts/admin_menu2' %>
 	<% end %>
 	
-
+<div class="container-fluid" id="draw_body">
 	<div id="wrapper">
 
 		<h1>Go <%= @kidname %> go!</h1>
@@ -12,5 +12,8 @@
 			<canvas id="c" width="360px" height="400px"></canvas>
 		</div>
 
-		<button id="check">Grade it!</button>
-	</div>
+	<!-- 		<button id="check">Grade it!</button> -->
+	<button id="check" class="draw_button"><%= image_tag("circle.png", width: "60") %></button>
+		</div>
+</div>
+

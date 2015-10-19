@@ -22,13 +22,17 @@ $(document).ready(function(){
 
 	function blink(){
 	  $('.hide_button').fadeOut(500).fadeIn(1500);
+	  $('.draw_button').fadeOut(500).fadeIn(1500);
+	  $('.draw_button').mouseover(function() {
+	  	clearInterval(blinker);
+	  })
 	}
 
 	// function scale(){
 	// 	$('.down').animate({width: 150px}, 1000);
  //    $('.down').animate({width: 100px}, 1000);
 	// }
-	setInterval(blink, 500);
+	var blinker = setInterval(blink, 500);
 
 	//------- END HOME PAGE ANIMATIONS ----------------
 
