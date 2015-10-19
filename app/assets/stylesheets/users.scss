@@ -288,7 +288,7 @@ div.alert.alert-info {
 
 .kid_gutter {
 	background-color: $purple;
-	height: 100vh;
+	height: 120vh;
 }
 
 .divider {
@@ -303,7 +303,7 @@ div.alert.alert-info {
 }
 
 .kid_divider_small {
-	border: 2px dotted $yellow;
+	border: 1px dotted $green;
 }
 
 .kid_view {
@@ -372,6 +372,45 @@ div.alert.alert-info {
 		width: 200px;
 		margin: 0 auto;
 	}
+}
+
+/* =========================
+------ DRAW PAGE -------
+========================== */
+
+#wrapper{
+	height:100%;
+	width: 100%;
+	color: white;
+	font-family: sans-serif;
+	text-align: center;
+	background-color: rgb(100, 100, 100);
+	h1 {
+		font-family: 'Gloria Hallelujah', cursive;
+		color: $red;
+	}
+}
+
+#check{
+	margin: 24px;
+	border: 1px solid black;
+	border-radius: 12px;
+	font-size: 24px;
+}
+
+#check:hover{
+	background-color: black;
+}
+
+
+#c-wrapper{
+	width: 440px;
+	margin: 0px auto;
+}
+
+#c{
+	background-color: rgb(200, 200, 200);
+	border: 1px solid black;
 }
 
 

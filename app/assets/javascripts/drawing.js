@@ -21,7 +21,7 @@ $(document).ready(function(){
 	})
 
 	function blink(){
-	  $('.hide_button').fadeOut(1000).fadeIn(1500);
+	  $('.hide_button').fadeOut(500).fadeIn(1500);
 	}
 
 	// function scale(){
