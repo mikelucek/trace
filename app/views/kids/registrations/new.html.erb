@@ -15,20 +15,22 @@
       <%= devise_error_messages! %>
 
       <div class="field">
-        <%= f.label :photo, "Photo Upload" %><br />
-        <%= f.text_field :photo %>
-      </div>
-
-      <div class="field">
-        <%= f.label :avatar %><br />
+        <%= f.label :avatar, "Child Photo" %><br />
         <%= f.file_field :avatar %>
       </div>
 
       <div class="field">
+        <%= f.label :email, "Parent email" %><br />
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+
+      <div class="none">
         <%= f.label :admin_id, "Admin ID" %><br />
         <%= f.text_field :admin_id, :value => current_admin.id %>
       </div>
-
+       <div class="field">
+      <%= render "layouts/kid_password" %>
+      </div>
 
       <div class="field">
         <%= f.label :first, "First Name" %><br />
@@ -48,11 +50,6 @@
       <div class="field">
         <%= f.label :age %><br />
         <%= f.text_field :age %>
-      </div>
-
-      <div class="field">
-        <%= f.label :email, "Parent email" %><br />
-        <%= f.email_field :email, autofocus: true %>
       </div>
 
       <div class="field">

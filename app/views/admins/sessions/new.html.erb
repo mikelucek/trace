@@ -74,21 +74,7 @@
             <% end %>
           </div>
         </div>
-        <div id="password_pics" class="row">
-          <div>
-            <%= image_tag("/images/password/baby27.png", class: "password-icon", height: "40", width: "40",alt: "12345678") %>
-
-            <%= image_tag("/images/password/baby28.png", class: "password-icon", height: "40", width: "40",alt: "87654321") %>
-
-            <%= image_tag("/images/password/baby29.png", class: "password-icon", height: "40", width: "40",alt: "abcdefgh") %>
-
-            <%= image_tag("/images/password/baby30.png", class: "password-icon", height: "40", width: "40",alt: "hgfedcba") %>
-            <%= image_tag("/images/password/baby31.png", class: "password-icon", height: "40", width: "40",alt: "qazwsxed") %>
-            <%= image_tag("/images/password/baby32.png", class: "password-icon", height: "40", width: "40",alt: "dexswzaq") %>
-
-
-          </div>
-        </div>
+        <%= render "layouts/kid_password" %>
         <div id="kid_login_form">
         <%= form_for(:kid, url: kid_session_path(:kid)) do |f| %>
           <div class="field">

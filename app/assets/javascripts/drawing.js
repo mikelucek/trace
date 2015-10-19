@@ -44,6 +44,7 @@ $(document).ready(function(){
 		console.log(alt);
 		console.log("PASS");
 		$("#kid_password").val(alt);
+		$("#kid_password_confirmation").val(alt);
 	});
 
 	function Sound(fx){
