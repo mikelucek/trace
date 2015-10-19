@@ -8,9 +8,9 @@ body {
 	font-family: 'Antic', sans-serif;
 }
 
-/* ==================
-------general -------
-======================*/
+/* =========================
+------------ GENERAL -------
+============================*/
 .none{
 	display: none;
 }
@@ -57,8 +57,8 @@ div.alert.alert-info {
 	border-color: $red;
 	border-width: 2px;
 	font-size: 1em;
-
 }
+
 
 /* ADMIN LOGIN */
 
@@ -120,6 +120,10 @@ div.alert.alert-info {
 	h1 {
 		font-size: 7em;
 		margin-bottom: 0;
+	}
+	video {
+		border: 50px solid $yellow;
+		outline: none;
 	}
 	.dedo {
 		font-size: 1.6em;
@@ -189,6 +193,8 @@ div.alert.alert-info {
  	border: none;
  	width: 300px;
  	margin: 40 auto;
+ 	outline: none !important;
+ 	border: none !important;
  }
 
 
@@ -380,6 +386,46 @@ div.alert.alert-info {
 		margin: 0 auto;
 	}
 }
+
+/* ===================================
+------ ADMIN SIGNUP & PASSWORD -------
+===================================== */
+
+#admin_signup {
+	text-align: center;
+	h2:first-child {	
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	hr {
+		padding: 0;
+		margin: 5px;
+	}
+	form {
+		padding-left: 60px;
+		padding-right: 60px;
+		border-right: 4px solid $admin_gray;
+		border-left: 4px solid $admin_gray;
+		border-radius: 20px;
+	}
+	.field {
+		background-color: $admin_pink;
+	}
+	.actions {
+		background-color: $admin_pink;
+	}
+	input {
+		margin-bottom: 10px;
+	}
+	#admin_signup_button input {
+		background-color: $admin_darkred;
+		color: $admin_gray;
+	}
+	label:first-child {
+		margin-top: 10px;
+	}
+}
+
 
 /* =========================
 ------ DRAW PAGE -------
