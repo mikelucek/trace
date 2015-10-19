@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-// HOME PAGE ANIMATIONS ------------------
+//------ HOME PAGE ANIMATIONS ------------------
 
 	var x = $('<hr>').css({
 		"border-color": "rgb(205, 32, 44)",
@@ -15,7 +15,7 @@ $(document).ready(function(){
 	$(".hide_button").click(function (e){
 		$("#gear").fadeIn(500);
 		$("#anim").fadeIn(1000);
-		$(".kid_login").fadeIn(1500);
+		$(".kid_login").fadeIn(2000);
 		$(e.target).slideUp();
 		$('.inner_button').append(x);
 	})
@@ -30,7 +30,7 @@ $(document).ready(function(){
 	// }
 	setInterval(blink, 500);
 
-	// END HOME PAGE ANIMATIONS ----------------
+	//------- END HOME PAGE ANIMATIONS ----------------
 
 	$('.login-photo').click(function(){
 		var alt = $(this).attr("alt");
