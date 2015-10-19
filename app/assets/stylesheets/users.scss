@@ -294,7 +294,7 @@ div.alert.alert-info {
 }
 
 .kid_gutter {
-	background-color: $purple;
+	background-color: $yellow;
 	height: 120vh;
 }
 
@@ -385,28 +385,31 @@ div.alert.alert-info {
 ------ DRAW PAGE -------
 ========================== */
 
+#draw_body {
+	background-color: $yellow;
+	margin-right: -15px;
+	margin-left: -15px;
+	height: 110vh;
+}
+
 #wrapper{
 	height:100%;
 	width: 100%;
 	color: white;
 	font-family: sans-serif;
 	text-align: center;
-	background-color: rgb(100, 100, 100);
+	background-color: $yellow;
 	h1 {
 		font-family: 'Gloria Hallelujah', cursive;
 		color: $red;
+		border-bottom: 2px solid $red;
+		width: 200px;
+		margin: 10px auto;
 	}
 }
 
 #check{
 	margin: 24px;
-	border: 1px solid black;
-	border-radius: 12px;
-	font-size: 24px;
-}
-
-#check:hover{
-	background-color: black;
 }
 
 
@@ -416,9 +419,21 @@ div.alert.alert-info {
 }
 
 #c{
-	background-color: rgb(200, 200, 200);
-	border: 1px solid black;
+	background-color: $yellow;
+	border: none;
 }
+
+.draw_button {
+ 	background-color: $yellow;
+ 	border: none;
+ 	width: 100px;
+ 	margin: 40 auto;
+ }
+
+ 	.draw_button:hover {
+ 		background-color: $orange;
+ 		border-radius: 50px;
+ }
 
 
 
