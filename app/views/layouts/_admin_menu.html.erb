@@ -5,6 +5,7 @@
 	<div class="col-md-4">
 		<ul class="admin_menu">
 			<li><%= link_to "Home", root_path %></li>
+			<li><%= link_to "Add a student", new_kid_registration_path %></li>
 			<li><%= link_to "View Drawing Task", score_index_path %>
 			<li><%= link_to "Sign Out", destroy_admin_session_path, method: "delete" %></li>
 		</ul>

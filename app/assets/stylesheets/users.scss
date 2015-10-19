@@ -45,11 +45,11 @@ body {
 }
 
 div.alert.alert-info {
-	background-color: $purple;
-	color: $green;
-	border-color: $green;
-	border-width: 4px;
-	font-size: 1.4em;
+	background-color: $red;
+	color: $yellow;
+	border-color: $red;
+	border-width: 2px;
+	font-size: 1em;
 
 }
 
@@ -331,6 +331,49 @@ div.alert.alert-info {
 		.table_big {
 			font-size: 3em;
 		}
+	}
+}
+
+/* =========================
+------ KID SIGNUP -------
+========================== */
+
+#kid_signup {
+	text-align: center;
+	h2:first-child {	
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	h2:nth-child(2) {
+		margin-top: 0;
+		font-weight: bold;
+	}
+	hr {
+		padding: 0;
+		margin: 5px;
+	}
+	form {
+		padding-left: 60px;
+		padding-right: 60px;
+		border-right: 4px solid $admin_gray;
+		border-left: 4px solid $admin_gray;
+		border-radius: 20px;
+	}
+	.field {
+		background-color: $admin_pink;
+	}
+	.actions {
+		background-color: $admin_pink;
+	}
+	input {
+		margin-bottom: 10px;
+	}
+	label:first-child {
+		margin-top: 10px;
+	}
+	#kid_avatar {
+		width: 200px;
+		margin: 0 auto;
 	}
 }
 

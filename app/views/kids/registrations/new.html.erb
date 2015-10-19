@@ -4,68 +4,77 @@
 
 <%= render 'layouts/admin_menu2' %>
 
-<h2>Student Sign Up Through <%= current_admin.first %></h2>
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2" id="kid_signup">
+    <h2>Student Sign Up Through</h2>
+    <h2><%= current_admin.first %> <%= current_admin.last %></h2>
+    <div>
+      <hr class="divider">
+    </div>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+      <div class="field">
+        <%= f.label :photo, "Photo Upload" %><br />
+        <%= f.text_field :photo %>
+      </div>
 
-  <div class="field">
-    <%= f.label :photo, "Photo Upload" %><br />
-    <%= f.text_field :photo %>
+      <div class="field">
+        <%= f.label :avatar %><br />
+        <%= f.file_field :avatar %>
+      </div>
+
+      <div class="field">
+        <%= f.label :admin_id, "Admin ID" %><br />
+        <%= f.text_field :admin_id, :value => current_admin.id %>
+      </div>
+
+
+      <div class="field">
+        <%= f.label :first, "First Name" %><br />
+        <%= f.text_field :first %>
+      </div>
+
+      <div class="field">
+        <%= f.label :last, "Last Name" %><br />
+        <%= f.text_field :last %>
+      </div>
+
+      <div class="field">
+        <%= f.label :school %><br />
+        <%= f.text_field :school %>
+      </div>
+
+      <div class="field">
+        <%= f.label :age %><br />
+        <%= f.text_field :age %>
+      </div>
+
+      <div class="field">
+        <%= f.label :email, "Parent email" %><br />
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Sign up" %>
+      </div>
+
+    <% end %>
+    <div>
+        <hr class="divider">
+      </div>
   </div>
-
-  <div class="field">
-    <%= f.label :avatar %><br />
-    <%= f.file_field :avatar %>
-  </div>
-
-  <div class="field">
-    <%= f.label :admin_id, "Admin ID" %><br />
-    <%= f.text_field :admin_id, :value => current_admin.id %>
-  </div>
-
-
-  <div class="field">
-    <%= f.label :first, "First Name" %><br />
-    <%= f.text_field :first %>
-  </div>
-
-  <div class="field">
-    <%= f.label :last, "Last Name" %><br />
-    <%= f.text_field :last %>
-  </div>
-
-  <div class="field">
-    <%= f.label :school %><br />
-    <%= f.text_field :school %>
-  </div>
-
-  <div class="field">
-    <%= f.label :age %><br />
-    <%= f.text_field :age %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email, "Parent email" %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "kids/shared/links" %>
+</div>
