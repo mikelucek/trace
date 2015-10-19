@@ -15,16 +15,25 @@
 	<br>
 	<div class="row">
 		<div class="col-sm-6 col-sm-offset-3">
-			<% if @kid.scores.any? %>
-		      <h3>Number of Tests (<%= @kid.scores.count %>)</h3><hr>
-		      <% @scores = @kid.scores.all %>
-		      <% @scores.each do |score| %>
+			<h3>Average Scores</h3>
+
+			<% ("A".."Z").each do |x| %>
+				<li>
+					<%= x %> ... <%= @hash[x] %>
+				</li>
+			<% end %>
+			<div class = "none">
+				<% if @kid.scores.any? %>
+		      	<h3>Number of Tests (<%= @kid.scores.count %>)</h3><hr>
+		      	<% @scores = @kid.scores.all %>
+		      	<% @scores.each do |score| %>
 				    <li>
 				      <%= score.letter %>
 				      <%= score.score %>
 				    <hr>
 		  		<% end %>
-		  <% end %>
+		  		<% end %>
+		  	</div>
 		</div>
 	</div>
 <% end %>
