@@ -295,6 +295,102 @@ div.alert.alert-info {
 		}
 }
 
+.admin_kids {
+	border-right: 2px solid $admin_darkred;
+	border-left: 2px solid $admin_darkred;
+	border-radius: 20px;
+	text-align: center;
+	margin-top: 15px;
+	margin-right: 4px;
+	margin-left: 4px;
+	margin-bottom: 20px;
+	background-color: $admin_gray;
+	#kid_list {
+		background-color: $admin_pink;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		#first {
+			border: 2px solid $admin_red;
+			width: 70%;
+		}
+		hr {
+			border: 1px dashed white;
+			width: 60%;
+		}
+	}
+	li {
+		list-style-type: none;
+		font-size: 1.2em;
+	}
+	a {
+		color: $admin_red;
+	}
+}
+
+/* ==================================
+------ KID PROFILE from ADMIN -------
+====================================*/
+
+#top {
+	margin-top: 20px;
+	margin-bottom: 0;
+	h1 {
+		border-bottom: 2px solid $red;
+	}
+	#kid_info2 {
+		text-align: right;
+		margin-right: 10px;
+	}
+	input {
+		font-size: .7em;
+		background-color: $admin_darkred;
+		color: $admin_gray;
+	}
+	#avatar {
+		border: 2px solid $admin_darkred;
+		border-radius: 20px;
+	}
+}
+
+.divider_dark {
+	border-color: $admin_darkred;
+	border-width: 25px;
+}
+
+#kid_metrics {
+	border-right: 2px solid $admin_darkred;
+	border-left: 2px solid $admin_darkred;
+	border-radius: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	background-color: $admin_gray;
+	#table_metrics {
+		margin: 0 auto;
+		text-align: center;
+		background-color: $admin_pink;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-top: 6px solid $admin_darkred;
+		}
+		#table_header {
+			border-bottom: 6px solid $admin_darkred;
+			font-size: 1.2em;
+		}
+		tr {
+		padding-bottom: 10px;
+		td {
+			border-bottom: 1px solid $admin_red;
+			border-right: 1px solid white;
+			border-left: 1px solid white;
+			padding-right: 10px;
+			padding-left: 10px;
+			font-size: 1.6em;
+		}
+	}
+}
+
+
+
 /* =========================
 ------ KID PROFILE -------
 ========================== */

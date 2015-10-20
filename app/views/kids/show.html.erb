@@ -2,42 +2,52 @@
 <%if admin_signed_in? %>
 	<%= render 'layouts/admin_menu2' %>
 
-	<div class="row">
-		<div class="col-sm-4 col-sm-offset-4">
+	<div class="row" id="top">
+		<div class="col-sm-3 col-sm-offset-3">
 			<h1><%= @kid.first %> <%= @kid.last %></h1>
-			<h3><%= @kid.school %><br><%= @kid.age %> years old <h3>
-			<p> <%= button_to "Delete this account", kid_delete_path({kid_id: @kid.id}), data: { confirm: "Are you sure?" }, method: :delete %></p>
+			<div id="kid_info2">
+				<h3><%= @kid.school %><br><%= @kid.age %> years old <h3>
+				<%= button_to "Delete this account", kid_delete_path({kid_id: @kid.id}), data: { confirm: "Are you sure?" }, method: :delete %>
+			</div>
 		</div>
+		<div class="col-sm-3" id="avatar">
+			<%= image_tag(@kid.avatar.url(:medium)) %>
+		</div> 
 	</div>
-	<br>
-	<div class="col-sm-8 col-sm-offset-2">
-		<hr class="divider">
-	</div>
-	<br>
-	<div class="row">
-		<div class="col-sm-6 col-sm-offset-3">
-			<h3>Average Scores</h3>
 
-			<% ("A".."Z").each do |x| %>
-				<li>
-					<%= x %> ... <%= @hash[x] %>
-				</li>
-			<% end %>
-			<div class = "none">
-				<% if @kid.scores.any? %>
-		      	<h3>Number of Tests (<%= @kid.scores.count %>)</h3><hr>
-		      	<% @scores = @kid.scores.all %>
-		      	<% @scores.each do |score| %>
-				    <li>
-				      <%= score.letter %>
-				      <%= score.score %>
-				    <hr>
-		  		<% end %>
-		  		<% end %>
-		  	</div>
+
+
+	<hr class="divider_dark">
+
+
+
+	<div class="row">
+		<div class="col-sm-8 col-sm-offset-2" id="kid_metrics">
+			<hr class="divider">
+			<% if @kid.scores.any? %>
+	      	<h1>Total Number of Tests (<%= @kid.scores.count %>)</h1>
+	    <% end %>
+	    <hr>
+	    <table id="table_metrics">
+	    	<tr id="table_header">
+	    		<td width="200px">Letter</td>
+	    		<td width="200px">Average Score</td>
+	    	</tr>
+				<% ("A".."Z").each do |x| %>
+					<tr>
+						<td><%= x %></td>
+						<td><%= @hash[x] %></td>
+					</tr>
+				<% end %>
+			</table>
+	  	<hr class="divider">
 		</div>
+
 	</div>
+		
+
 <% end %>
+	
 
 <% if kid_signed_in? %>
 	<%= render 'layouts/kid_menu2' %>
