@@ -6,6 +6,7 @@
 		<div class="col-sm-4 col-sm-offset-4">
 			<h1><%= @kid.first %> <%= @kid.last %></h1>
 			<h3><%= @kid.school %><br><%= @kid.age %> years old <h3>
+			<p> <%= button_to "Delete this account", kid_delete_path({kid_id: @kid.id}), data: { confirm: "Are you sure?" }, method: :delete %></p>
 		</div>
 	</div>
 	<br>

@@ -22,6 +22,7 @@
   post '/submit_score', to: 'scores#submit', as: :submit_score
   get '/index_score', to: 'scores#index', as: :score_index
   get '/kid_profile', to: 'kids#show', as: :kid_profile
+  delete '/kid_delete', to: 'kids#destroy', as: :kid_delete
 
   root 'users#index'
 

@@ -112,7 +112,8 @@ div.alert.alert-info {
 	font-family: 'Gloria Hallelujah', cursive;
 	background-color: $yellow;
 	padding: 0;
-	padding-top: 5%;
+	height: 84px;
+	padding-top: 2%;
 	margin: 0;
 	color: $red;
 	text-align: center;
@@ -122,8 +123,12 @@ div.alert.alert-info {
 		margin-bottom: 0;
 	}
 	video {
-		border: 50px solid $yellow;
+		border: 20px solid $yellow;
+		outline: 20px solid $yellow;
 		outline: none;
+		padding: -20px;
+		right: -2px;
+		overflow: hidden;
 	}
 	.dedo {
 		font-size: 1.6em;
@@ -132,6 +137,9 @@ div.alert.alert-info {
 		display: none;
 		position:absolute;
 		z-index: 20;
+		right: 2px;
+		left: 2px;
+		overflow: hidden;
 	}
 }
 
