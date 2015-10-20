@@ -14,7 +14,7 @@ $(document).ready(function(){
 
 	$(".hide_button").click(function (e){
 		$("#gear").fadeIn(500);
-		$("#anim").fadeIn(1000);
+		$("#anim").show();
 		$(".kid_login").fadeIn(2000);
 		$(e.target).slideUp();
 		$('.inner_button').append(x);

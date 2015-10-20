@@ -42,6 +42,8 @@ body {
 	border: none;
 	padding: 3px;
 	font-size: .8em;
+	outline: none !important;
+ 	border: none !important;
 	:hover {
 		border-color: $red;
 	}
@@ -129,6 +131,8 @@ div.alert.alert-info {
 		padding: -20px;
 		right: -2px;
 		overflow: hidden;
+		outline: none !important;
+ 		border: none !important;
 	}
 	.dedo {
 		font-size: 1.6em;
@@ -362,6 +366,7 @@ div.alert.alert-info {
 	border-left: 2px solid $admin_darkred;
 	border-radius: 20px;
 	margin-bottom: 20px;
+
 	text-align: center;
 	background-color: $admin_gray;
 	#table_metrics {
