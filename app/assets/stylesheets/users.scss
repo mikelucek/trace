@@ -415,11 +415,13 @@ div.alert.alert-info {
 ========================== */
 
 #kid_info {
-	background-color: $green;
+	// background-color: $green;
 	color: $red;
 	padding: 25px;
+	border-top: 2px solid $red;
 	border-radius: 20px;
 	margin-top: 20px;
+	padding-top: 0;
 }
 
 .kid_gutter {
