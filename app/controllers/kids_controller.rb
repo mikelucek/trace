@@ -37,7 +37,16 @@ class KidsController < ApplicationController
 		@hash
 
 	end
+
+	def destroy
+		@kid = Kid.find(params[:kid_id])
+		@kid.destroy
+		redirect_to root_path
+	end
+
 end
+
+
 
 	private
   
